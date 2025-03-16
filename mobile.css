@@ -1,0 +1,59 @@
+/* Hide the checkbox (toggle control) */
+#menu-toggle {
+    display: none;
+}
+
+/* Style for Hamburger Icon */
+.menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+/* Navbar Styling (Hidden by Default) */
+.navbar {
+    display: none; /* Ensure it is hidden by default */
+    background-color: #333;
+    position: absolute;
+    top: 60px; /* Adjust based on hamburger position */
+    right: 0;
+    width: 200px; /* Adjust width if needed */
+    padding: 10px;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li {
+    margin: 10px 0;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+/* Show Navbar When Checkbox is Checked */
+#menu-toggle:checked ~ .navbar {
+    display: block; /* Show the menu only when checked */
+}
+
+/* Mobile-Specific Design */
+@media screen and (max-width: 768px) {
+    .menu-icon {
+        display: block; /* Show hamburger on smaller screens */
+    }
+
+    .navbar {
+        position: absolute;
+        top: 60px;
+    }
+}
+
